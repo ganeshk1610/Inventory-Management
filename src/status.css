@@ -1,0 +1,39 @@
+.product-table-container {
+    padding: 20px;
+  }
+  
+  .product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .product-table th,
+  .product-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .product-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .green-arrow {
+    color: green;
+  }
+  
+  .red-arrow {
+    color: red;
+  }
+  
+  .profit-loss-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .header{
+    text-align: center;
+  }

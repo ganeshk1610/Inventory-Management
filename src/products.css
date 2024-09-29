@@ -1,0 +1,162 @@
+/* Style for the tab container and individual tabs */
+.tab-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    transition: filter 0.3s ease;
+  }
+  
+  .tab {
+    background-color: #f0f0f0;
+    padding: 20px;
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  .tab:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Popup container styles */
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+
+  .popup-contentform {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    height: 470px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+  /* Style for the close button (cross mark) */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Blur effect when popup is open */
+  .blur {
+    filter: blur(5px);
+    pointer-events: none; /* Prevent interactions with the blurred background */
+  }
+  .popup-content form label{
+   margin-right: 40px;
+  }
+  
+
+  .custom-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    width: 150px; /* Adjust label width as needed */
+    margin-right: 10px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    flex: 1; /* Allow input to take up the remaining space */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .submit-btn {
+    width: 50%;
+    padding: 10px;
+    margin-top: 30px;
+    background-color: #161617;
+    color: white;
+    border: none;
+    margin-left: 25%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .submit-btn:hover {
+    background-color: #6c757d;
+    transition: 1s;
+  }
+  
+  
+  .blur {
+    filter: blur(5px);
+  }
+
+ 
+
+
+  .custom-quantity {
+    display: flex;
+    align-items: center;
+  }
+  
+  .custom-quantity input {
+    text-align: center;
+    width: 60px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 10px;
+  }
+  
+  .custom-quantity button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .custom-quantity button:hover {
+    background-color: #ddd;
+  }
+  
+  .custom-quantity .decrement-btn {
+    margin-right: 10px;
+  }
+  
+  .custom-quantity .increment-btn {
+    margin-left: 10px;
+  }
+  
