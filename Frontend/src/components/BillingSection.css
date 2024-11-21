@@ -1,110 +1,129 @@
 .billing-section {
-    width: 50%;
-    margin: auto;
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 10px;
-   
-  }
-  
-  .customer-selection {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  .product-search{
-    width: 100%;
-    margin-bottom: 15px;
-  }
-  
-  .product-search input {
-    padding: 5px;
-    width: 70%;
-  }
-  
-  .search-btn {
-    padding: 5px;
-    background-color: #6c757d;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-left: 2px;
-    margin-top: 2px;
-    padding-top: 3px;
-  }
-  
-  .billing-table {
-    width: 100%;
-    margin-bottom: 20px;
-    border-collapse: collapse;
-  }
-  
-  .billing-table th, .billing-table td {
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .product-image {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-  }
-  
-  .remove-btn {
-    background-color: #ddd;
-    color: red;
-    border: none;
-    padding: 2px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .billing-summary {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    margin-top: 40px;
-  }
-  
-  .billing-summary input {
-    width: 100px;
-    padding: 5px;
-  }
-  
-  .billing-actions {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
-  }
-  
-  .billing-actions button {
-    border-radius: 5px;
-  }
-  .action-btn {
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .print-btn {
-    background-color: #000000;
-    color: white;
-  }
-  
-  .cancel-btn {
-    background-color: #000000;
-    color: white;
-  }
-  
-  .hold-btn {
-    background-color: #000000;
-    color: white;
-  }
-  
-  .pay-btn {
-    background-color: #000000;
-    color: white;
-  }
-  
+  padding: 20px;
+  max-width: 800px;
+}
+
+.customer-selection {
+  margin-bottom: 20px;
+}
+
+.product-search input {
+  width: 70%;
+  padding: 10px;
+  margin-right: 10px;
+}
+.product-search input {
+  width: 70%;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.product-search .search-btn {
+  padding: 10px;
+  background-color: #000000;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.product-search .search-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+
+.search-btn {
+  padding: 10px 20px;
+}
+
+.billing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.billing-table th, .billing-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.billing-table th {
+  background-color: #f4f4f4;
+}
+
+.billing-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.billing-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+}
+
+.qty-btn {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.qty-input {
+  width: 60px;
+  text-align: center;
+  border: none;
+  height: 25px;
+  margin: 0 10px;
+}
+
+.remove-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.billing-summary {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.billing-summary .summary-item {
+  font-size: 18px;
+}
+
+.billing-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.billing-actions .action-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.print-btn {
+  background-color: #17a2b8;
+}
+
+.cancel-btn {
+  background-color: #ffc107;
+}
+
+.pay-btn {
+  background-color: #28a745;
+}

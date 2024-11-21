@@ -2,55 +2,73 @@
   {
       "id": 1,
       "name": "IndiaGate Basmathi Rice",
+      "category": "Groceries",
       "batchNo": "#L91",
+      "price": 50,
       "quantity": 300
   },
   {
       "id": 2,
       "name": "Fortune Sunflower Oil",
+      "category": "Groceries",
       "batchNo": "#L81",
+      "price": 100,
       "quantity": 1500
   },
   {
       "id": 3,
       "name": "Tata Salt",
+      "category": "Groceries",
       "batchNo": "#L101",
+      "price": 20,
       "quantity": 1000
   },
   {
       "id": 4,
       "name": "Aashirvaad Atta",
+      "category": "Groceries",
       "batchNo": "#L71",
+      "price": 40,
       "quantity": 500
   },
   {
       "id": 5,
       "name": "Bru Coffee",
+      "category": "Beverages",
       "batchNo": "#L11",
+      "price": 70,
       "quantity": 700
   },
   {
       "id": 6,
       "name": "Nescafe Coffee",
+      "category": "Beverages",
       "batchNo": "#L15",
+      "price": 80,
       "quantity": 900
   },
   {
       "id": 7,
       "name": "Dairy Milk Chocolate",
+      "category": "Snacks",
       "batchNo": "#L88",
+      "price": 30,
       "quantity": 1000
   },
   {
       "id": 8,
       "name": "Parle-G Biscuits",
+      "category": "Snacks",
       "batchNo": "#L98",
+      "price": 10,
       "quantity": 2000
   },
   {
       "id": 9,
       "name": "Himalaya Soap",
+      "category": "Personal Care",
       "batchNo": "#L65",
+      "price": 25,
       "quantity": 500
   }
 ]

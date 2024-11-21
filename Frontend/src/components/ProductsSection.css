@@ -21,12 +21,40 @@
     cursor: pointer;
     border-radius: 15px;
     border: none;
+    
 }
 
 .product-card p {
   margin: 5px 0;
 }
-.product-card:hover{
-  background-color: #e0e0e0;
 
+.products-section {
+  margin: 20px;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-table th, .product-table td {
+  padding: 20px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.product-table th {
+  background-color: #f4f4f4;
+}
+
+.product-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.product-table tr:hover {
+  background-color: #f1f1f1;
 }
