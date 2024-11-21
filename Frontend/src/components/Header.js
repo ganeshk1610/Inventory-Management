@@ -2,7 +2,7 @@ import { Fragment, useContext } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import AuthContext from "../AuthContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const navigation = [
   { name: "Dashboard", href: "/", current: true },
@@ -12,7 +12,7 @@ const navigation = [
   { name: "Manage Store", href: "/manage-store", current: false },
 ];
 
-const userNavigation = [{ name: "Sign out", href: "./login" }];
+const userNavigation = [{ name: "Sign out", href: "/login" }];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -21,6 +21,13 @@ function classNames(...classes) {
 export default function Header() {
   const authContext = useContext(AuthContext);
   const localStorageData = JSON.parse(localStorage.getItem("user"));
+  const navigate = useNavigate();
+
+  const handleSignOut = () => {
+    authContext.signout(); // Call the signout function from AuthContext
+    navigate("/login"); // Navigate to the login page
+  };
+
   return (
     <>
       <div className="min-h-full">
@@ -33,13 +40,13 @@ export default function Header() {
                     <div className="flex-shrink-0">
                       <div className="flex justify-center items-center gap-2">
                         <img
-                          className="h-20 w-1000"
+                          className="h-20 w-auto"
                           src={require("../assets/logo.png")}
                           alt="Inventory Management System"
                         />
-                        <span className="font-bold text-white italic">
-                          {/* Inventory Management */}
-                        </span>
+                        {/* <span className="font-bold text-white italic">
+                          Inventory Management
+                        </span> */}
                       </div>
                     </div>
                   </div>
@@ -78,17 +85,15 @@ export default function Header() {
                             {userNavigation.map((item) => (
                               <Menu.Item key={item.name}>
                                 {({ active }) => (
-                                  <Link
-                                    to={item.href}
+                                  <button
+                                    onClick={handleSignOut}
                                     className={classNames(
                                       active ? "bg-gray-100" : "",
-                                      "block px-4 py-2 text-sm text-gray-700"
+                                      "block w-full text-left px-4 py-2 text-sm text-gray-700"
                                     )}
                                   >
-                                    <span onClick={() => authContext.signout()}>
-                                      {item.name}{" "}
-                                    </span>
-                                  </Link>
+                                    {item.name}
+                                  </button>
                                 )}
                               </Menu.Item>
                             ))}
@@ -124,7 +129,6 @@ export default function Header() {
                       <Disclosure.Button
                         key={item.name}
                         as="a"
-                        // href={item.href}
                         className={classNames(
                           item.current
                             ? "bg-gray-900 text-white"
@@ -149,33 +153,22 @@ export default function Header() {
                     </div>
                     <div className="ml-3">
                       <div className="text-base font-medium leading-none text-white">
-                        {localStorageData.firstName +
-                          " " +
-                          localStorageData.lastName}
+                        {localStorageData.firstName} {localStorageData.lastName}
                       </div>
                       <div className="text-sm font-medium leading-none text-gray-400">
                         {localStorageData.email}
                       </div>
                     </div>
-                    <button
-                      type="button"
-                      className="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                    >
-                      <span className="sr-only">View notifications</span>
-                      <BellIcon className="h-6 w-6" aria-hidden="true" />
-                    </button>
                   </div>
                   <div className="mt-3 space-y-1 px-2">
                     {userNavigation.map((item) => (
                       <Disclosure.Button
                         key={item.name}
-                        as="a"
-                        href={item.href}
-                        className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+                        as="button"
+                        onClick={handleSignOut}
+                        className="block w-full text-left rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
                       >
-                        <span onClick={() => authContext.signout()}>
-                          {item.name}{" "}
-                        </span>
+                        {item.name}
                       </Disclosure.Button>
                     ))}
                   </div>

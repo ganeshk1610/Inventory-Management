@@ -1,0 +1,220 @@
+[
+    {
+      "name": "IndiaGate Basmathi Rice",
+      "batchNo": "#L91",
+      "quantity": 300,
+      "price": 60,
+      "barcode": "8901234567890"
+    },
+    {
+      "name": "Fortune Sunflower Oil",
+      "batchNo": "#L81",
+      "quantity": 1500,
+      "price": 120,
+      "barcode": "8902345678901"
+    },
+    {
+      "name": "Tata Salt",
+      "batchNo": "#L101",
+      "quantity": 1000,
+      "price": 20,
+      "barcode": "8903456789012"
+    },
+    {
+      "name": "Aashirvaad Atta",
+      "batchNo": "#L71",
+      "quantity": 500,
+      "price": 40,
+      "barcode": "8904567890123"
+    },
+    {
+      "name": "Bru Coffee",
+      "batchNo": "#L11",
+      "quantity": 700,
+      "price": 150,
+      "barcode": "8905678901234"
+    },
+    {
+      "name": "Nescafe Coffee",
+      "batchNo": "#L15",
+      "quantity": 900,
+      "price": 200,
+      "barcode": "8906789012345"
+    },
+    {
+      "name": "Dairy Milk Chocolate",
+      "batchNo": "#L88",
+      "quantity": 1000,
+      "price": 10,
+      "barcode": "8907890123456"
+    },
+    {
+      "name": "Parle-G Biscuits",
+      "batchNo": "#L98",
+      "quantity": 2000,
+      "price": 5,
+      "barcode": "8908901234567"
+    },
+    {
+      "name": "Himalaya Soap",
+      "batchNo": "#L65",
+      "quantity": 500,
+      "price": 35,
+      "barcode": "8909012345678"
+    },
+    {
+      "name": "Dove Shampoo",
+      "batchNo": "#L22",
+      "quantity": 1200,
+      "price": 120,
+      "barcode": "8909123456789"
+    },
+    {
+      "name": "Surf Excel Detergent",
+      "batchNo": "#L36",
+      "quantity": 800,
+      "price": 90,
+      "barcode": "8909234567890"
+    },
+    {
+      "name": "Pepsi Soft Drink",
+      "batchNo": "#L66",
+      "quantity": 1500,
+      "price": 40,
+      "barcode": "8909345678901"
+    },
+    {
+      "name": "Maggi Noodles",
+      "batchNo": "#L19",
+      "quantity": 3000,
+      "price": 15,
+      "barcode": "8909456789012"
+    },
+    {
+      "name": "Dettol Handwash",
+      "batchNo": "#L78",
+      "quantity": 600,
+      "price": 70,
+      "barcode": "8909567890123"
+    },
+    {
+      "name": "Colgate Toothpaste",
+      "batchNo": "#L17",
+      "quantity": 900,
+      "price": 50,
+      "barcode": "8909678901234"
+    },
+    {
+      "name": "Amul Butter",
+      "batchNo": "#L45",
+      "quantity": 400,
+      "price": 50,
+      "barcode": "8909789012345"
+    },
+    {
+      "name": "Bournvita Health Drink",
+      "batchNo": "#L92",
+      "quantity": 800,
+      "price": 160,
+      "barcode": "8909890123456"
+    },
+    {
+      "name": "Santoor Soap",
+      "batchNo": "#L23",
+      "quantity": 900,
+      "price": 25,
+      "barcode": "8909901234567"
+    },
+    {
+      "name": "Red Label Tea",
+      "batchNo": "#L38",
+      "quantity": 1000,
+      "price": 180,
+      "barcode": "8900012345678"
+    },
+    {
+      "name": "Nestle Milkmaid",
+      "batchNo": "#L50",
+      "quantity": 500,
+      "price": 90,
+      "barcode": "8900023456789"
+    },
+    {
+      "name": "Head & Shoulders Shampoo",
+      "batchNo": "#L26",
+      "quantity": 750,
+      "price": 130,
+      "barcode": "8900034567890"
+    },
+    {
+      "name": "Ponds Face Cream",
+      "batchNo": "#L21",
+      "quantity": 650,
+      "price": 110,
+      "barcode": "8900045678901"
+    },
+    {
+      "name": "Hershey's Chocolate Syrup",
+      "batchNo": "#L81",
+      "quantity": 450,
+      "price": 200,
+      "barcode": "8900056789012"
+    },
+    {
+      "name": "Maaza Mango Drink",
+      "batchNo": "#L63",
+      "quantity": 1600,
+      "price": 30,
+      "barcode": "8900067890123"
+    },
+    {
+      "name": "Britannia Cheese",
+      "batchNo": "#L44",
+      "quantity": 300,
+      "price": 60,
+      "barcode": "8900078901234"
+    },
+    {
+      "name": "Horlicks",
+      "batchNo": "#L34",
+      "quantity": 700,
+      "price": 190,
+      "barcode": "8900089012345"
+    },
+    {
+      "name": "Vaseline Body Lotion",
+      "batchNo": "#L91",
+      "quantity": 850,
+      "price": 100,
+      "barcode": "8900090123456"
+    },
+    {
+      "name": "Sunfeast Biscuits",
+      "batchNo": "#L67",
+      "quantity": 1200,
+      "price": 20,
+      "barcode": "8900101234567"
+    },
+    {
+      "name": "Pepsodent Toothpaste",
+      "batchNo": "#L98",
+      "quantity": 950,
+      "price": 45,
+      "barcode": "8900112345678"
+    },
+    {
+      "name": "Kwality Walls Ice Cream",
+      "batchNo": "#L09",
+      "quantity": 600,
+      "price": 110,
+      "barcode": "8900123456789"
+    },
+    {
+      "name": "Coca-Cola Soft Drink",
+      "batchNo": "#L33",
+      "quantity": 1800,
+      "price": 40,
+      "barcode": "8900134567890"
+    }
+  ]
+  

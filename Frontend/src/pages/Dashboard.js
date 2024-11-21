@@ -7,7 +7,7 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export const data = {
-  labels: ["Apple", "Knorr", "Shoop", "Green", "Purple", "Orange"],
+  labels: ["Groceries", "Clothing", "Footwear", "Electronics", "Utilities", "Snacks"],
   datasets: [
     {
       label: "# of Votes",
@@ -134,6 +134,7 @@ function Dashboard() {
     fetchProductsData,
     fetchMonthlySalesData,
   ]);
+  
 
   return (
     <>
@@ -165,10 +166,10 @@ function Dashboard() {
 
             <p>
               <span className="text-2xl font-medium text-gray-900">
-                ${saleAmount}
+                {saleAmount}{" "}₹
               </span>
 
-              <span className="text-xs text-gray-500"> from $240.94 </span>
+              <span className="text-xs text-gray-500"> from 2400094 ₹</span>
             </p>
           </div>
         </article>
@@ -201,10 +202,10 @@ function Dashboard() {
             <p>
               <span className="text-2xl font-medium text-gray-900">
                 {" "}
-                ${purchaseAmount}{" "}
+                {purchaseAmount}{" "}₹
               </span>
 
-              <span className="text-xs text-gray-500"> from $404.32 </span>
+              <span className="text-xs text-gray-500"> from 404.32 ₹ </span>
             </p>
           </div>
         </article>

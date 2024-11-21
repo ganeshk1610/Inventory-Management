@@ -1,0 +1,32 @@
+.products-section {
+  margin: 20px;
+  padding: 10px;
+  
+}
+.products-section h2 {
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.product-card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 15px;
+    border: none;
+}
+
+.product-card p {
+  margin: 5px 0;
+}
+.product-card:hover{
+  background-color: #e0e0e0;
+
+}
