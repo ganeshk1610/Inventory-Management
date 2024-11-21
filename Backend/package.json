@@ -17,5 +17,6 @@
     "nodemon": "^2.0.21"
   },
   "keywords": [],
+  "devDependencies": {},
   "description": ""
 }

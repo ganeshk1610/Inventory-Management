@@ -1,38 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
-import "./index.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Inventory from "./pages/Inventory";
 import NoPageFound from "./pages/NoPageFound";
 import AuthContext from "./AuthContext";
 import ProtectedWrapper from "./ProtectedWrapper";
-import { useEffect, useState } from "react";
 import Store from "./pages/Store";
 import Sales from "./pages/Sales";
 import PurchaseDetails from "./pages/PurchaseDetails";
+import POS from "./pages/Pos"; // Correct path based on your structure
 
 const App = () => {
   const [user, setUser] = useState("");
   const [loader, setLoader] = useState(true);
-  let myLoginUser = JSON.parse(localStorage.getItem("user"));
-  // console.log("USER: ",user)
 
   useEffect(() => {
+    const myLoginUser = JSON.parse(localStorage.getItem("user"));
     if (myLoginUser) {
       setUser(myLoginUser._id);
-      setLoader(false);
-      // console.log("inside effect", myLoginUser)
     } else {
       setUser("");
-      setLoader(false);
     }
-  }, [myLoginUser]);
+    setLoader(false);
+  }, []);
 
   const signin = (newUser, callback) => {
     setUser(newUser);
+    localStorage.setItem("user", JSON.stringify({ _id: newUser })); // Store user in localStorage
     callback();
   };
 
@@ -41,7 +38,7 @@ const App = () => {
     localStorage.removeItem("user");
   };
 
-  let value = { user, signin, signout };
+  const value = { user, signin, signout };
 
   if (loader)
     return (
@@ -61,8 +58,14 @@ const App = () => {
     <AuthContext.Provider value={value}>
       <BrowserRouter>
         <Routes>
+          {/* Public Routes */}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+
+          {/* Redirect to login if accessing the root */}
+          <Route path="/" element={<Navigate to="/login" />} />
+
+          {/* Protected Routes */}
           <Route
             path="/"
             element={
@@ -71,12 +74,16 @@ const App = () => {
               </ProtectedWrapper>
             }
           >
-            <Route index element={<Dashboard />} />
-            <Route path="/inventory" element={<Inventory />} />
-            <Route path="/purchase-details" element={<PurchaseDetails />} />
-            <Route path="/sales" element={<Sales />} />
-            <Route path="/manage-store" element={<Store />} />
+            {/* Nested routes within the protected layout */}
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="inventory" element={<Inventory />} />
+            <Route path="purchase-details" element={<PurchaseDetails />} />
+            <Route path="sales" element={<Sales />} />
+            <Route path="manage-store" element={<Store />} />
+            <Route path="pos" element={<POS />} />
           </Route>
+
+          {/* Catch-all for unmatched routes */}
           <Route path="*" element={<NoPageFound />} />
         </Routes>
       </BrowserRouter>
