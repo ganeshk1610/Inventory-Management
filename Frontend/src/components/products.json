@@ -1,48 +1,56 @@
 [
-    {
+  {
+      "id": 1,
       "name": "IndiaGate Basmathi Rice",
       "batchNo": "#L91",
       "quantity": 300
-    },
-    {
+  },
+  {
+      "id": 2,
       "name": "Fortune Sunflower Oil",
       "batchNo": "#L81",
       "quantity": 1500
-    },
-    {
+  },
+  {
+      "id": 3,
       "name": "Tata Salt",
       "batchNo": "#L101",
       "quantity": 1000
-    },
-    {
+  },
+  {
+      "id": 4,
       "name": "Aashirvaad Atta",
       "batchNo": "#L71",
       "quantity": 500
-    },
-    {
+  },
+  {
+      "id": 5,
       "name": "Bru Coffee",
       "batchNo": "#L11",
       "quantity": 700
-    },
-    {
+  },
+  {
+      "id": 6,
       "name": "Nescafe Coffee",
       "batchNo": "#L15",
       "quantity": 900
-    },
-    {
+  },
+  {
+      "id": 7,
       "name": "Dairy Milk Chocolate",
       "batchNo": "#L88",
       "quantity": 1000
-    },
-    {
+  },
+  {
+      "id": 8,
       "name": "Parle-G Biscuits",
       "batchNo": "#L98",
       "quantity": 2000
-    },
-    {
+  },
+  {
+      "id": 9,
       "name": "Himalaya Soap",
       "batchNo": "#L65",
       "quantity": 500
-    }
-  ]
-  
+  }
+]

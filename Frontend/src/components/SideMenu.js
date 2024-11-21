@@ -9,7 +9,7 @@ function SideMenu() {
       <div className="px-4 py-6">
         <nav aria-label="Main Nav" className="mt-6 flex flex-col space-y-1">
           <Link
-            to="/"
+            to="/Dashboard"
             className="flex items-center gap-2 rounded-lg hover:bg-gray-100 px-4 py-2 text-gray-700"
           >
             <img

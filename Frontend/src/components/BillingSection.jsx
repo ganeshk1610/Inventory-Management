@@ -139,7 +139,7 @@ const BillingSection = () => {
       </div>
 
       <div className="billing-actions">
-        <button className="action-btn print-btn">🖨️ Print</button>
+        <button className="action-btn print-btn" >🖨️ Print</button>
         <button className="action-btn cancel-btn" onClick={clearBill}>✖ Cancel</button>
         <button className="action-btn hold-btn">{'\u270B'} Hold</button>
         <button className="action-btn pay-btn" onClick={handlePay}>💵 Pay</button>
