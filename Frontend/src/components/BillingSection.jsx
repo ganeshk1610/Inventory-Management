@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './BillingSection.css';
 import productData from './alldata.json';
 import searchicon from './images/search.png'
+import logo from'./images/black.png';
 
 const BillingSection = () => {
   const [products, setProducts] = useState([]);
@@ -71,40 +72,48 @@ const BillingSection = () => {
     }
   };
 
-  const handlePrint = () => {
-    const printContent = `
-      <div>
+const handlePrint = () => {
+  const printContent = `
+    <div style="font-family: Arial, sans-serif; padding: 20px;">
+      <div style="text-align: center; margin-bottom: 20px;">
+        <img src='${logo}' alt="InvenTrax" style="width: 100px;"/>
         <h1>Billing Details</h1>
-        <table border="1">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Item</th>
-              <th>Qty</th>
-              <th>Price</th>
+      </div>
+      <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+        <thead>
+          <tr>
+            <th style="border: 1px solid #ddd; padding: 8px; background-color: #f4f4f4;">#</th>
+            <th style="border: 1px solid #ddd; padding: 8px; background-color: #f4f4f4;">Item</th>
+            <th style="border: 1px solid #ddd; padding: 8px; background-color: #f4f4f4;">Qty</th>
+            <th style="border: 1px solid #ddd; padding: 8px; background-color: #f4f4f4;">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${products.map((product, index) => `
+            <tr key=${product.id}>
+              <td style="border: 1px solid #ddd; padding: 8px;">${index + 1}</td>
+              <td style="border: 1px solid #ddd; padding: 8px;">${product.name}</td>
+              <td style="border: 1px solid #ddd; padding: 8px;">${product.qty}</td>
+              <td style="border: 1px solid #ddd; padding: 8px;">${product.price * product.qty}.00 ₹</td>
             </tr>
-          </thead>
-          <tbody>
-            ${products.map((product, index) => `
-              <tr key=${product.id}>
-                <td>${index + 1}</td>
-                <td>${product.name}</td>
-                <td>${product.qty}</td>
-                <td>${product.price * product.qty}.00 ₹</td>
-              </tr>
-            `).join('')}
-          </tbody>
-        </table>
+          `).join('')}
+        </tbody>
+      </table>
+      <div style="text-align: right; margin-bottom: 20px;">
         <h2>Total Item(s): ${totalItems}</h2>
         <h2>Total Price: ${totalAmount}.00 ₹</h2>
       </div>
-    `;
+      <div style="text-align: center;">
+        <p>Thank you for your purchase!</p>
+      </div>
+    </div>
+  `;
 
-    const newWindow = window.open('', '', 'width=800,height=600');
-    newWindow.document.write(printContent);
-    newWindow.document.close();
-    newWindow.print();
-  };
+  const newWindow = window.open('', '', 'width=800,height=600');
+  newWindow.document.write(printContent);
+  newWindow.document.close();
+  newWindow.print();
+};
 
   return (
     <div className="billing-section">
