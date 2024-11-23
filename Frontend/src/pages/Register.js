@@ -66,11 +66,11 @@ function Register() {
       <div className="grid grid-cols-1 sm:grid-cols-2 h-screen  items-center place-items-center">
         <div className="w-full max-w-md space-y-8  p-10 rounded-lg">
           <div>
-            <img
-              className="mx-auto h-12 w-auto"
-              src={require("../assets/logo.png")}
-              alt="Your Company"
-            />
+          <img
+            className="mx-auto h-30 w-60"
+            src={require("../assets/black.png")}
+            alt="InverTrax"
+          />
             <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
               Register your account
             </h2>

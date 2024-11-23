@@ -96,7 +96,7 @@ function Inventory() {
                 Last 7 days
               </span>
             </div>
-            <div className="flex flex-col gap-3 p-10   w-full  md:w-3/12 sm:border-y-2  md:border-x-2 md:border-y-0">
+            {/* <div className="flex flex-col gap-3 p-10   w-full  md:w-3/12 sm:border-y-2  md:border-x-2 md:border-y-0">
               <span className="font-semibold text-yellow-600 text-base">
                 Stores
               </span>
@@ -118,7 +118,7 @@ function Inventory() {
                   </span>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="flex flex-col gap-3 p-10  w-full  md:w-3/12  sm:border-y-2 md:border-x-2 md:border-y-0">
               <span className="font-semibold text-purple-600 text-base">
                 Top Selling
@@ -126,7 +126,7 @@ function Inventory() {
               <div className="flex gap-8">
                 <div className="flex flex-col">
                   <span className="font-semibold text-gray-600 text-base">
-                    5
+                    0
                   </span>
                   <span className="font-thin text-gray-400 text-xs">
                     Last 7 days
@@ -134,7 +134,7 @@ function Inventory() {
                 </div>
                 <div className="flex flex-col">
                   <span className="font-semibold text-gray-600 text-base">
-                    1500 ₹
+                    0 ₹
                   </span>
                   <span className="font-thin text-gray-400 text-xs">Cost</span>
                 </div>
@@ -147,7 +147,7 @@ function Inventory() {
               <div className="flex gap-8">
                 <div className="flex flex-col">
                   <span className="font-semibold text-gray-600 text-base">
-                    12
+                    0
                   </span>
                   <span className="font-thin text-gray-400 text-xs">
                     Ordered
@@ -155,7 +155,7 @@ function Inventory() {
                 </div>
                 <div className="flex flex-col">
                   <span className="font-semibold text-gray-600 text-base">
-                    2
+                    0
                   </span>
                   <span className="font-thin text-gray-400 text-xs">
                     Not in Stock

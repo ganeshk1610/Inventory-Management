@@ -76,7 +76,7 @@ const handlePrint = () => {
   const printContent = `
     <div style="font-family: Arial, sans-serif; padding: 20px;">
       <div style="text-align: center; margin-bottom: 20px;">
-        <img src='${logo}' alt="InvenTrax" style="width: 100px;"/>
+        <img src='${logo}' alt="InvenTrax" style="width: 250px;"/>
         <h1>Billing Details</h1>
       </div>
       <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">

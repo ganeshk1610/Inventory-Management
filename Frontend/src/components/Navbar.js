@@ -8,8 +8,7 @@ const Navbar = ({ onSearch }) => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        {/* <img src={logo1} alt="Company Logo" style={{ height: '80px', marginLeft: '10px' }}  /> */}
-        <img src={logo} alt="RAZZX" style={{ height: '50px', marginBottom: '15px' }} />
+        <img src={logo} alt="InvenTrax" style={{ height: '50px', marginBottom: '15px' }} />
       </div>
       <div className="search-bar">
         <input 
