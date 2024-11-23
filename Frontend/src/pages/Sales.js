@@ -121,7 +121,7 @@ function Sales() {
                       {element.SaleDate}
                     </td>
                     <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                      ${element.TotalSaleAmount}
+                    ₹{element.TotalSaleAmount}
                     </td>
                   </tr>
                 );
