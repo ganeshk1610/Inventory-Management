@@ -3,9 +3,11 @@
   padding: 10px;
   
 }
-.products-section h2 {
+.products-section p {
   padding-left: 30px;
   padding-bottom: 30px;
+  font-weight: 700;
+  font-size: x-large;
 }
 .product-grid {
   display: grid;

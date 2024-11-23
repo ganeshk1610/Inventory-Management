@@ -19,11 +19,11 @@ const ProductsSection = () => {
 
   return (
     <div className="products-section">
-      <h2>Products</h2>
+      <p>Products</p>
       
       <div className="filter-section">
         <label htmlFor="category-filter">Filter by Category: </label>
-        <select id="category-filter" value={selectedCategory} onChange={handleCategoryChange}>
+        <select id="category-filter" style={{border:"none"}} value={selectedCategory} onChange={handleCategoryChange}>
           {categories.map(category => (
             <option key={category} value={category}>{category}</option>
           ))}

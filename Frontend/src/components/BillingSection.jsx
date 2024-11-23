@@ -179,9 +179,9 @@ const BillingSection = () => {
       </div>
 
       <div className="billing-actions">
-        <button className="action-btn print-btn" onClick={handlePrint}>🖨️ Print</button>
-        <button className="action-btn cancel-btn" onClick={clearBill}>✖ Clear All</button>
-        <button className="action-btn pay-btn" onClick={handlePay}>💵 Pay</button>
+        <button className="action-btn print-btn" onClick={handlePrint} >🖨️ Print</button>
+        <button className="action-btn cancel-btn" onClick={clearBill} >✖ Clear All</button>
+        <button className="action-btn pay-btn" onClick={handlePay} >💵 Pay</button>
       </div>
     </div>
   );
