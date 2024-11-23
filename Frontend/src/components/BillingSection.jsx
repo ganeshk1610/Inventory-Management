@@ -26,7 +26,7 @@ const BillingSection = () => {
   };
 
   const totalAmount = products.reduce((acc, product) => acc + (product.price * product.qty), 0);
-  const totalItems = products.reduce((acc, product) => acc + product.qty, 0);
+  const totalItems = products.length;
 
   const handleSearch = (e) => {
     e.preventDefault();
