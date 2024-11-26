@@ -8,7 +8,7 @@ export default function AddStore() {
   const authContext = useContext(AuthContext);
   const [form, setForm] = useState({
     userId: authContext.user,
-    name: "",
+    Brand: "",
     category: "",
     address: "",
     city: "",
@@ -31,7 +31,7 @@ export default function AddStore() {
       body: JSON.stringify(form),
     })
       .then((result) => {
-        alert("STORE ADDED");
+        alert("NEW Category ADDED");
         setOpen(false);
       })
       .catch((err) => console.log(err));
@@ -101,7 +101,7 @@ export default function AddStore() {
                         as="h3"
                         className="text-lg font-semibold leading-6 text-gray-900 "
                       >
-                        Store Information
+                        Category
                       </Dialog.Title>
                       <form action="#">
                         <div className="grid gap-4 mb-4 sm:grid-cols-2">
@@ -110,7 +110,7 @@ export default function AddStore() {
                               htmlFor="name"
                               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                             >
-                              Name
+                              Brand
                             </label>
                             <input
                               type="text"
@@ -234,7 +234,7 @@ export default function AddStore() {
                     className="inline-flex w-full justify-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 sm:ml-3 sm:w-auto"
                     onClick={addProduct}
                   >
-                    Add Store
+                    Add Category
                   </button>
                   <button
                     type="button"

@@ -9,16 +9,17 @@ function Store() {
   const authContext = useContext(AuthContext);
 
   useEffect(() => {
-    const fetchData = () => {
-      fetch(`http://localhost:4000/api/store/get/${authContext.user}`)
-        .then((response) => response.json())
-        .then((data) => {
-          setAllStores(data);
-        });
-    };
-
     fetchData();
-  }, [authContext.user]);
+  }, []);
+
+  // Fetching all stores data
+  const fetchData = () => {
+    fetch(`http://localhost:4000/api/store/get/${authContext.user}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setAllStores(data);
+      });
+  };
 
   const modalSetting = () => {
     setShowModal(!showModal);
@@ -28,16 +29,16 @@ function Store() {
     <div className="col-span-12 lg:col-span-10 flex justify-center ">
       <div className=" flex flex-col gap-5 w-11/12 border-2">
         <div className="flex justify-between">
-          <span className="font-bold">Manage Store</span>
+          <span className="font-bold">Manage Category</span>
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold p-2 text-xs  rounded"
             onClick={modalSetting}
           >
-            Add Store
+            Add Category
           </button>
         </div>
         {showModal && <AddStore />}
-        {stores.map((element) => {
+        {stores.map((element, index) => {
           return (
             <div
               className="bg-white w-50 h-fit flex flex-col gap-4 p-4 "
