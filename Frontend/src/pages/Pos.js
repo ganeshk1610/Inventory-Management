@@ -1,20 +1,31 @@
 // src/App.js
-import React, { useState } from 'react';
-import Navbar from '../components/Header.js';
-import BillingSection from '../components/BillingSection.jsx';
-import ProductsSection from '../components/ProductsSection.jsx';
-import './Pos.css';
-
+import React, { useState } from "react";
+import Navbar from "../components/Header.js";
+import BillingSection from "../components/BillingSection.jsx";
+import ProductsSection from "../components/ProductsSection.jsx";
+import "./Pos.css";
 
 const Pos = () => {
   const [products, setProducts] = useState([
-    { id: 1, name: 'Apple', price: 1.5, stock: 10, image: '/images/apple.jpg' },
-    { id: 2, name: 'Banana', price: 0.5, stock: 15, image: '/images/banana.jpg' },
-    { id: 3, name: 'Orange', price: 1.0, stock: 12, image: '/images/orange.jpg' },
+    { id: 1, name: "Apple", price: 1.5, stock: 10, image: "/images/apple.jpg" },
+    {
+      id: 2,
+      name: "Banana",
+      price: 0.5,
+      stock: 15,
+      image: "/images/banana.jpg",
+    },
+    {
+      id: 3,
+      name: "Orange",
+      price: 1.0,
+      stock: 12,
+      image: "/images/orange.jpg",
+    },
   ]);
 
   const [cart, setCart] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
 
   // Add product to cart and update stock
   const addToCart = (product) => {
@@ -53,7 +64,7 @@ const Pos = () => {
 
   return (
     <div className="body">
-      <Navbar  />
+      <Navbar />
       <div className="content">
         <BillingSection cart={cart} total={total} onCancel={handleCancel} />
         <ProductsSection products={filteredProducts} addToCart={addToCart} />

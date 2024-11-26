@@ -1,17 +1,21 @@
-import React, { useState } from 'react';
-import productsData from './products.json'; // Import JSON file
-import './ProductsSection.css';
+import React, { useState } from "react";
+import productsData from "./products.json"; // Import JSON file
+import "./ProductsSection.css";
 
 const ProductsSection = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   // Extract unique categories from products data
-  const categories = ['All', ...new Set(productsData.map(product => product.category))];
+  const categories = [
+    "All",
+    ...new Set(productsData.map((product) => product.category)),
+  ];
 
   // Filter products based on selected category
-  const filteredProducts = selectedCategory === 'All' 
-    ? productsData 
-    : productsData.filter(product => product.category === selectedCategory);
+  const filteredProducts =
+    selectedCategory === "All"
+      ? productsData
+      : productsData.filter((product) => product.category === selectedCategory);
 
   const handleCategoryChange = (e) => {
     setSelectedCategory(e.target.value);
@@ -20,16 +24,23 @@ const ProductsSection = () => {
   return (
     <div className="products-section">
       <p>Products</p>
-      
+
       <div className="filter-section">
         <label htmlFor="category-filter">Filter by Category: </label>
-        <select id="category-filter" style={{border:"none"}} value={selectedCategory} onChange={handleCategoryChange}>
-          {categories.map(category => (
-            <option key={category} value={category}>{category}</option>
+        <select
+          id="category-filter"
+          style={{ border: "none" }}
+          value={selectedCategory}
+          onChange={handleCategoryChange}
+        >
+          {categories.map((category) => (
+            <option key={category} value={category}>
+              {category}
+            </option>
           ))}
         </select>
       </div>
-      
+
       <table className="product-table">
         <thead>
           <tr>
@@ -41,7 +52,7 @@ const ProductsSection = () => {
           </tr>
         </thead>
         <tbody>
-          {filteredProducts.map(product => (
+          {filteredProducts.map((product) => (
             <tr key={product.id}>
               <td>{product.name}</td>
               <td>{product.category}</td>
