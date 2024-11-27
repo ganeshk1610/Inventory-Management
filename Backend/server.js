@@ -1,7 +1,7 @@
 const express = require("express");
 const { main } = require("./models/index");
 const productRoute = require("./router/product");
-const storeRoute = require("./router/store");
+
 const purchaseRoute = require("./router/purchase");
 const salesRoute = require("./router/sales");
 const cors = require("cors");
@@ -15,8 +15,7 @@ main();
 app.use(express.json());
 app.use(cors());
 
-// Store API
-app.use("/api/store", storeRoute);
+
 
 // Products API
 app.use("/api/product", productRoute);
@@ -26,6 +25,8 @@ app.use("/api/purchase", purchaseRoute);
 
 // Sales API
 app.use("/api/sales", salesRoute);
+
+
 
 // ------------- Signin --------------
 let userAuthCheck;
