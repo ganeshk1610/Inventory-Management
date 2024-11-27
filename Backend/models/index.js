@@ -30,6 +30,6 @@ function main() {
     });
 }
 
-main();
+// main();
 
 module.exports = { main };
