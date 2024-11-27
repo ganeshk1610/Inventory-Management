@@ -12,9 +12,8 @@ const SaleSchema = new mongoose.Schema(
       ref: "product",
       required: true,
     },
-    StoreID: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "store",
+    Category: {
+      type: String, // Categories can be simple strings like "Electronics", "Groceries", etc.
       required: true,
     },
     StockSold: {

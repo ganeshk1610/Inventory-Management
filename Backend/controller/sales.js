@@ -1,12 +1,12 @@
 const Sales = require("../models/sales");
 const soldStock = require("../controller/soldStock");
-
+const Product = require("../models/Product");
 // Add Sales
 const addSales = (req, res) => {
   const addSale = new Sales({
     userID: req.body.userID,
     ProductID: req.body.productID,
-    StoreID: req.body.storeID,
+    Category: req.body.category, // Updated to use 'category' instead of 'storeID'
     StockSold: req.body.stockSold,
     SaleDate: req.body.saleDate,
     TotalSaleAmount: req.body.totalSaleAmount,
@@ -25,24 +25,23 @@ const addSales = (req, res) => {
 
 // Get All Sales Data
 const getSalesData = async (req, res) => {
-  const findAllSalesData = await Sales.find({"userID": req.params.userID})
+  const findAllSalesData = await Sales.find({ userID: req.params.userID })
     .sort({ _id: -1 })
-    .populate("ProductID")
-    .populate("StoreID"); // -1 for descending order
+    .populate("ProductID"); // Removed 'StoreID'
   res.json(findAllSalesData);
 };
 
 // Get total sales amount
-const getTotalSalesAmount = async(req,res) => {
+const getTotalSalesAmount = async (req, res) => {
   let totalSaleAmount = 0;
-  const salesData = await Sales.find({"userID": req.params.userID});
-  salesData.forEach((sale)=>{
+  const salesData = await Sales.find({ userID: req.params.userID });
+  salesData.forEach((sale) => {
     totalSaleAmount += sale.TotalSaleAmount;
-  })
-  res.json({totalSaleAmount});
+  });
+  res.json({ totalSaleAmount });
+};
 
-}
-
+// Get Monthly Sales
 const getMonthlySales = async (req, res) => {
   try {
     const sales = await Sales.find();
@@ -50,11 +49,10 @@ const getMonthlySales = async (req, res) => {
     // Initialize array with 12 zeros
     const salesAmount = [];
     salesAmount.length = 12;
-    salesAmount.fill(0)
+    salesAmount.fill(0);
 
     sales.forEach((sale) => {
       const monthIndex = parseInt(sale.SaleDate.split("-")[1]) - 1;
-
       salesAmount[monthIndex] += sale.TotalSaleAmount;
     });
 
@@ -64,7 +62,18 @@ const getMonthlySales = async (req, res) => {
     res.status(500).json({ error: "Server error" });
   }
 };
+const searchProduct = async (req, res) => {
+  const searchTerm = req.query.searchTerm;
+  const products = await Product.find({
+    name: { $regex: searchTerm, $options: "i" },
+  });
+  res.json(products);
+};
 
-
-
-module.exports = { addSales, getMonthlySales, getSalesData,  getTotalSalesAmount};
+module.exports = {
+  addSales,
+  getMonthlySales,
+  getSalesData,
+  getTotalSalesAmount,
+  searchProduct,
+};
