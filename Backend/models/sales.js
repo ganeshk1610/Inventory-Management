@@ -9,7 +9,7 @@ const SaleSchema = new mongoose.Schema(
     },
     ProductID: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "product",
+      ref: "Product",
       required: true,
     },
     Category: {
@@ -27,6 +27,11 @@ const SaleSchema = new mongoose.Schema(
     TotalSaleAmount: {
       type: Number,
       required: true,
+    },
+    transactionID: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "SaleTransaction",
+      required: false, // Optional for backward compatibility
     },
   },
   { timestamps: true }

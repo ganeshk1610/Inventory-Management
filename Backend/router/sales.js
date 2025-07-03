@@ -1,27 +1,30 @@
 const express = require("express");
-const app = express();
+const router = express.Router();
 const sales = require("../controller/sales");
 
-// const router = express.Router();
-// Add Sales
-app.post("/add", sales.addSales);
+// Sales Transaction Management
+router.post("/transaction", sales.createSaleTransaction);
+router.get("/transaction/:transactionId", sales.getSaleTransaction);
+router.get("/transactions/:userID", sales.getAllTransactions);
 
-// Get All Sales
-app.get("/get/:userID", sales.getSalesData);
-app.get("/getmonthly", sales.getMonthlySales);
-app.get("/get/:userID/totalsaleamount", sales.getTotalSalesAmount);
-app.get("/search", product.searchProduct);
-module.exports = app;
+// Individual Sales Management
+router.post("/add", sales.addSales);
+router.get("/get/:userID", sales.getSalesData);
 
+// Products Sold Analytics
+router.get("/products-sold/:userID", sales.getProductsSold);
+router.get("/products-sold/:userID/today", sales.getProductsSoldToday);
+router.get("/products-sold/:userID/period", sales.getProductsSoldByPeriod);
 
+// Sales Analytics
+router.get("/analytics/:userID/daily", sales.getDailySales);
+router.get("/analytics/:userID/monthly", sales.getMonthlySales);
+router.get("/analytics/:userID/total", sales.getTotalSalesAmount);
 
+// Product Search for POS
+router.get("/search-products", sales.searchProduct);
 
-
-
+// Inventory Impact
+router.get("/low-stock/:userID", sales.getLowStockProducts);
 
 module.exports = router;
-
-
-
-// http://localhost:4000/api/sales/add POST
-// http://localhost:4000/api/sales/get GET
