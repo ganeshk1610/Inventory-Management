@@ -4,9 +4,13 @@ const productRoute = require("./router/product");
 
 const purchaseRoute = require("./router/purchase");
 const salesRoute = require("./router/sales");
+const transactionRoute = require("./router/transaction");
+const analyticsRoute = require("./router/analytics");
 const cors = require("cors");
 const User = require("./models/users");
 const Product = require("./models/Product");
+const Transaction = require("./models/transaction");
+const Customer = require("./models/customer");
 
 
 const app = express();
@@ -25,6 +29,12 @@ app.use("/api/purchase", purchaseRoute);
 
 // Sales API
 app.use("/api/sales", salesRoute);
+
+// Transaction API (New comprehensive sales system)
+app.use("/api/transaction", transactionRoute);
+
+// Analytics API
+app.use("/api/analytics", analyticsRoute);
 
 
 
