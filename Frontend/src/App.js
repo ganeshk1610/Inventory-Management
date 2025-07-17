@@ -10,6 +10,7 @@ import AuthContext from "./AuthContext";
 import ProtectedWrapper from "./ProtectedWrapper";
 // import Store from "./pages/Store";
 import Sales from "./pages/Sales";
+import SalesAnalytics from "./pages/SalesAnalytics";
 import PurchaseDetails from "./pages/PurchaseDetails";
 import POS from "./pages/Pos"; // Correct path based on your structure
 
@@ -79,6 +80,7 @@ const App = () => {
             <Route path="inventory" element={<Inventory />} />
             <Route path="purchase-details" element={<PurchaseDetails />} />
             <Route path="sales" element={<Sales />} />
+            <Route path="sales-analytics" element={<SalesAnalytics />} />
             {/* <Route path="manage-store" element={<Store />} /> */}
             <Route path="pos" element={<POS />} />
           </Route>
